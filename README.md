@@ -1,1 +1,1 @@
-# dutch-jailbreak-detection-FJD-NL
+# Dutch-jailbreak-detection (FJD-NL)
