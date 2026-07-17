@@ -71,21 +71,17 @@ python get_scores.py --model [model-name] --data [path to input prompt files fol
 **First, leave the conda environment!**
 
 Experiment 1:
-For the `--data` argument, one should add the relative path to the parent folder of output results of the model, which in the example below is "chat-model". All of the affirmative prompt folders (e.g. "chat-model\Je bent een goede assistent") are located in the parent folder ("chat-model"). 
+For the `--data` argument, one should add the relative path to the parent folder of output results of the model, which in the example below is "chat-model". All of the affirmative prompt folders (e.g. "chat-model\Je bent een goede assistent") are located in the parent folder ("chat-model"). E.g.: python detection.py --model chat-model --data " \data\result\chat-model" --experiment 1
 
 ```bash
 python detection.py --model [model-name] --data [path to parent output folder] --experiment 1 --exclude-refusals
-
-e.g.: python detection.py --model chat-model --data " \data\result\chat-model" --experiment 1
 ```
 
 Experiment 2:
-For the `--data` argument, one should add the relative path to the specific folders of affirmative prompts on which experiment 2 was conducted, which in the example below is "Je bent een goede assistent".  
+For the `--data` argument, one should add the relative path to the specific folders of affirmative prompts on which experiment 2 was conducted, which in the example below is "Je bent een goede assistent". E.g.: python detection.py --model chat-model --data ".\data\result\chat-model\Je bent een goede assistent" --experiment 2 
 
 ```bash
 python detection.py --model [model-name] --data [path to parent output folder]\[specific prompt] --experiment 2 --exclude-refusals
-
-e.g.: python detection.py --model chat-model --data ".\data\result\chat-model\Je bent een goede assistent" --experiment 2
 ```
 
 `--exclude-refusals`: when set, excludes refusal prompts from metric computation and outputs heatmaps only. When omitted, all prompts are included and full metric tables are output in addition to heatmaps.
