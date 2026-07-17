@@ -49,7 +49,7 @@ MODELS = {
 
 ## Running the scoring step
 
-Set your API key (if using an API-based model):
+Set your API key (if using an API-based model) as an environment variable:
 
 ```powershell
 $env:API_KEY="[INSERT API KEY HERE]"
